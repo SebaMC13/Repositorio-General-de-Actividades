@@ -3,10 +3,15 @@ def escoger_masa(masas):
     while masa_escogida < 1 or masa_escogida > 3:
         for masa in masas:
             print(masa)
-        masa_escogida = int(input("Seleccione una masa: "))
+        try:
+            masa_escogida = int(input("Seleccione una masa: "))
+        except ValueError:
+            print("Debe ingresar un número")
+            continue
         if masa_escogida < 1 or masa_escogida > 3:
-            print("Escoja una opción mostrada en pantalla")
+            print("Escoja una de las opciones mostrada en pantalla")
         else:
-            posicion_masas = masas[int(masa_escogida) - 1]
+            posicion_masas = masas[masa_escogida - 1]
             print(posicion_masas)  # borrar despues
     return masa_escogida
+            

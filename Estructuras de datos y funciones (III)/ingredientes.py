@@ -1,5 +1,4 @@
-def escoger_ingredientes(ingredientes):
-    ingredientes_pizza = []
+def escoger_ingredientes(ingredientes, ingredientes_pizza):
     ingrediente_actual = 0
     while True:
         for ingrediente in ingredientes:
@@ -14,7 +13,10 @@ def escoger_ingredientes(ingredientes):
         if ingrediente_actual < 1 or ingrediente_actual > 9:
             print("Escoja solo las opciones mostrada en pantalla")
         else:
-            ingredientes_pizza.append(ingrediente_actual)
-            posicion_ingredientes = ingredientes[ingrediente_actual - 1]
-            print(posicion_ingredientes)  # borrar despues
-    return ingredientes_pizza
+            if ingrediente_actual in ingredientes_pizza:
+                print("Ingrediente ya agregado")
+            else:
+                ingredientes_pizza.append(ingrediente_actual)
+                texto_ingrediente_escogido = ingredientes[ingrediente_actual - 1]
+                print(texto_ingrediente_escogido)  # borrar despues
+    return ingredientes_pizza # ya se que no hace nada, pero es mas estetico

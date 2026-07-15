@@ -10,8 +10,5 @@ def escoger_masa(masas):
             continue
         if masa_escogida < 1 or masa_escogida > 3:
             print("Escoja una de las opciones mostrada en pantalla")
-        else:
-            posicion_masas = masas[masa_escogida - 1]
-            print(posicion_masas)  # borrar despues
+            print("")
     return masa_escogida
-            

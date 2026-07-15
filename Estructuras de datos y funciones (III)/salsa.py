@@ -9,8 +9,6 @@ def escoger_salsa(salsas):
             print("Debe ingresar un número")
             continue
         if salsa_escogida < 1 or salsa_escogida > 4:
-            print("Escoja una de las opciones mostrada en pantalla")
-        else:
-            posicion_salsas = salsas[salsa_escogida - 1]
-            print(posicion_salsas) #borrar despues
+            print("Escoja una de las opciones mostradas en la pantalla")
+            print("")
     return salsa_escogida

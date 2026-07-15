@@ -4,7 +4,9 @@ def escoger_ingredientes(ingredientes, ingredientes_pizza):
         for ingrediente in ingredientes:
             print(ingrediente)
         try:
-            ingrediente_actual = int(input("Seleccione los ingrediente de su pizza (0 para terminar): "))
+            ingrediente_actual = int(
+                input("Seleccione los ingrediente de su pizza (0 para terminar): ")
+            )
         except ValueError:
             print("Debe ingresar un número")
             continue
@@ -17,6 +19,4 @@ def escoger_ingredientes(ingredientes, ingredientes_pizza):
                 print("Ingrediente ya agregado")
             else:
                 ingredientes_pizza.append(ingrediente_actual)
-                texto_ingrediente_escogido = ingredientes[ingrediente_actual - 1]
-                print(texto_ingrediente_escogido)  # borrar despues
-    return ingredientes_pizza # ya se que no hace nada, pero es mas estetico
+                print("")

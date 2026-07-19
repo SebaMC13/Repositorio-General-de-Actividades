@@ -10,7 +10,7 @@ opciones = {"basicas": [1, 2, 3], "intermedias": [1, 2, 3], "avanzadas": [1, 2, 
 
 def choose_q(dificultad):
     # escoger preguntas por dificultad
-    preguntas = p.pool_preguntas[dificultad]
+    preguntas_nivel = p.pool_preguntas[dificultad]
 
     # usar opciones desde ambiente global
     global opciones
@@ -20,7 +20,7 @@ def choose_q(dificultad):
     opciones[dificultad].remove(n_elegido)
 
     # escoger enunciado y alternativas mezcladas
-    pregunta = preguntas[f"pregunta_{n_elegido}"]
+    pregunta = preguntas_nivel[f"pregunta_{n_elegido}"]
     alternativas = shuffle_alt(pregunta)
 
     return pregunta["enunciado"], alternativas

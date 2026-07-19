@@ -17,8 +17,6 @@ def verificar(alternativas, eleccion):
     return correcto
 
 
-# Errores al ingresar numero y letras #########
-
 if __name__ == "__main__":
     from print_preguntas import print_pregunta
 

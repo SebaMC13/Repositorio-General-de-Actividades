@@ -1,12 +1,25 @@
-# Paso 1
 class Te:
-    def __init__(self, sabores, formato):
-        self.sabores = sabores
+    duracion_te = 365
+    def __init__(self, sabor, formato):
+        self.sabor = sabor
         self.formato = formato
 
+    @staticmethod
+    def tiempo_recomendacion(sabor):
+        if sabor == 1:
+            return (3, "Desayuno")
+        elif sabor == 2:
+            return (5, "Medio Dia")
+        elif sabor == 3:
+            return (6, "Atardecer")
+        else:
+            return ("Ingrese un valor numerico valido")
 
-# Agregar metodo estatico que retorne el tiempo de preparación y la recomendación correspondiente, según el sabor ingresado por parámetro.
-
-# Parámetro sabor como un número entero
-
-# Agregue un método estático que retorne el precio según el formato ingresado por parámetro (número entero).
+    @staticmethod
+    def formato_gr(formato):
+        if formato == 500:
+            return (5000)
+        elif formato == 300:
+            return (3000)
+        else:
+            return ("Ingrese un valor numerico valido")
